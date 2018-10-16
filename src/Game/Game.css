@@ -1,0 +1,60 @@
+.Game {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.Game span {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.Game .mis-alert {
+  animation-name: pulse;
+  animation-duration: .35s;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {
+    color: black;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.Game .mis-fail {
+  color: black;
+  opacity: 1;
+  transform: scale(1);
+  animation: goAway 3s forwards;
+  animation-delay: 2s;
+}
+
+.Game .mis-fail span {
+  cursor: default;
+}
+
+.Game .mis-fail .mis-right-answer {
+  color: red !important;
+}
+@keyframes goAway {
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.Game .mis-over {
+  display: none;
+}
+
+.Game button {
+  padding: 5px 30px;
+  display: inline-block;
+  font-size: .8rem;
+  background-color: #03A9F4;
+  color: #fff;
+}
